@@ -1,0 +1,11 @@
+{
+    "empNamee": "Sekhar",
+    "empId": 1234,
+    "empSalary": 50000,
+    "empAddress": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+    }
+}
