@@ -24,7 +24,6 @@ test.describe("multiple tests", () => {  //grouping all related tests
         await page.goto('https://qtpsudhakar-vibetestq-hrm.up.railway.app/');
         // await page.goto("")
         console.log("before each test"+ test.info().title)
-        testInfo.
     })
 
     test.afterEach(async({})=>{
