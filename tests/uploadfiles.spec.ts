@@ -1,11 +1,11 @@
 import  { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-    await page.locator('input[name="username"]').fill('userTest1791826265666');
+    await page.goto('https://qtpsudhakar-vibetestq-hrm.up.railway.app/');
+    await page.locator('input[name="username"]').fill('Bhuvanadmin');
     await page.locator('input[name="password"]').fill('Vibetestq@123#');
     await page.locator('button[type="submit"]').click();
-    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
+    await expect(page).toHaveURL('https://qtpsudhakar-vibetestq-hrm.up.railway.app/web/index.php/dashboard/index');
     //add employee
     let firstName = 'user';
     let lastName = 'Test'+Date.now();
@@ -31,7 +31,7 @@ test('test', async ({ page }) => {
 //another way
 
 // let [fileChooserPro]=Promise.all[]
-    await fileChooser.setFiles('tests\\files\\VQLogoTitleForLight.png');
+    await fileChooser.setFiles('files/VQLogoTitleForLight.png');
 
 
 

@@ -6,12 +6,12 @@ import { AddEmployee } from "../pom/addemployeepage";
 import { AdminPage } from "../pom/adminpage";
 
 test('test', async ({ page }) => {
-  await page.goto('https://opensource-demo.orangehrmlive.com');
+  await page.goto('https://qtpsudhakar-vibetestq-hrm.up.railway.app/');
   await page.waitForLoadState('networkidle');
 
   const loginPage=new LoginPage(page);
-  await loginPage.enterUsername("Bhuvans");
-  await loginPage.enterPassword("Test@123");
+  await loginPage.enterUsername("Bhuvanadmin");
+  await loginPage.enterPassword("Vibetestq@123#");
   await loginPage.clickLoginButton();
 
   //click on PIM link
