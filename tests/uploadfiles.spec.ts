@@ -19,7 +19,6 @@ test('test', async ({ page }) => {
     await page.locator('input[name="lastName"]').fill(lastName);
     await page.locator('button[type="submit"]').click();
     await expect(page.getByText('Successfully Saved')).toBeVisible();
-    // await expect(page).toHaveURL(/.*\/web\/index.php\/pim\/viewEmployeeList.*/);
 
     await page.locator("//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[1]/div[1]/div[2]/div/img").click();
 
