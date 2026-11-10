@@ -9,7 +9,6 @@ export class AddUserPage{
     private txtPassword:Locator;
     private txtConfirmPassword:Locator;
 
-
 constructor(page:Page){
     this.page=page;
     this.lstUserRole=page.getByText('-- Select --').first().describe("user role listbox in add user page");
