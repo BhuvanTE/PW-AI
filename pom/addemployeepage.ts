@@ -1,6 +1,7 @@
 import{Page,Locator} from '@playwright/test'
+import { BasePage } from './basepage';
 
-export class AddEmployee{
+export class AddEmployee extends BasePage{
 
     private txtFirstName:Locator;
     private txtLastName:Locator;
@@ -10,7 +11,7 @@ export class AddEmployee{
 
 
     constructor(page:Page){
-
+        super(page);
         this.txtFirstName=page.getByRole('textbox', { name: 'First Name' }).describe("Add employee first name")
         this.txtLastName=page.getByRole('textbox', { name: 'Last Name' }).describe("Add employee Last name");
         this.btnSave=page.getByRole('button', { name: 'Save' }).describe("Add employee Save btn");
@@ -26,6 +27,7 @@ export class AddEmployee{
 
     public async enterLastName(lastName:string){
         await this.txtLastName.fill(lastName);
+        // await this.navigateTo("https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee"); //using basepage navigateTo method to navigate to add employee page after entering last name
 
     }
 
